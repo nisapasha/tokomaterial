@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_toko_barang,access.toko.barang,model_toko_barang,,1,1,1,1
+access_toko_karyawan,access.toko.karyawan,model_toko_karyawan,,1,1,1,1
+access_toko_pembeli,access.toko.pembeli,model_toko_pembeli,,1,1,1,1
+access_toko_penjualan,access.toko.penjualan,model_toko_penjualan,,1,1,1,1
+access_toko_transaksi,access.toko.transaksi,model_toko_transaksi,,1,1,1,1

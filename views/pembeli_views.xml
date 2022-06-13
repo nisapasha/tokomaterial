@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- toko.pembeli tree view -->
+    <record id="toko_material_pembeli_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Pembeli</field>
+        <field name="model">toko.pembeli</field>
+        <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="alamat"/>
+             
+            </tree>
+        </field>
+    </record>
+
+    <!-- toko.pembeli form view -->
+    <record id="toko_material_pembeli_view_form" model="ir.ui.view">
+        <field name="name">Input Pembeli</field>
+        <field name="model">toko.pembeli</field>
+        <field name="arch" type="xml">
+             <form string="">
+                <sheet>
+                    <group>
+                     <field name="name"/>
+                     <field name="alamat"/>
+
+                    </group>
+                </sheet>
+             </form>
+        </field>
+    </record>
+
+    <!-- toko.pembeli action window -->
+    <record id="toko_material_pembeli_action" model="ir.actions.act_window">
+        <field name="name">Daftar Pembeli</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.pembeli</field>
+        <field name="view_mode">tree,form</field>        
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="toko_material_pembeli_menu_act" 
+        name="Daftar Pembeli" 
+        parent="toko_barang_menu_categ" 
+        action="toko_material_pembeli_action" 
+        sequence="30"/>
+</odoo>

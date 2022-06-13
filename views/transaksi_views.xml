@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<!-- toko.transaksi tree view -->
+    <record id="toko_material_transaksi_view_tree" model="ir.ui.view">
+      <field name="name">Daftar Transaksi</field>
+      <field name="model">toko.transaksi</field>
+      <field name="arch" type="xml">
+           <tree>
+              <field name="Kode_Barang"/>
+              <field name="Tanggal"/>
+              <field name="Nik" />
+              <field name="barang_ids" />
+            </tree>
+        </field>
+    </record>
+
+<!--  toko.transaksi form view -->
+    <record id="toko_material_transaksi_view_form" model="ir.ui.view">
+      <field name="name">Input Transaksi</field>
+      <field name="model">toko.transaksi</field>
+      <field name="arch" type="xml">
+      <form string="">
+              <sheet>
+                <group>
+                    <field name="Kode_Barang"/>
+                    <field name="Tanggal"/>
+                    <field name="Nik"/>
+                    <field name="barang_ids" />
+                </group>
+              </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- toko.transaksi action window -->
+    <record id="toko_material_transaksi_action" model="ir.actions.act_window">
+        <field name="name">Transaksi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.transaksi</field>
+        <field name="view_mode">tree,form</field>        
+    </record>
+<!-- This Menu Item must have a parent and an action -->
+    <menuitem id="toko_material_transaksi_menu_act" 
+        name="Transaksi" 
+        parent="toko_barang_menu_categ" 
+        action="toko_material_transaksi_action" 
+        sequence="40"/>
+    
+
+</odoo>
